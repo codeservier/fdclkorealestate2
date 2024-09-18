@@ -15,13 +15,13 @@ const Stats = () => {
           <div className="">
             <div>
               <div className="text-center">
-                <h2 className="text-5xl font-semibold  text-gray-800">Get to Know Us More</h2>
+                <h2 className="text-5xl font-semibold  text-gray-800">Discover More About Us</h2>
                 <p className="mx-auto max-w-3xl mt-10 text-lg text-gray-400 mb-4 w-full">
-                  We are a company that provides a variety of services in the field of real estate, we are ready to help you find a house that suits your needs.
+                We are a dedicated real estate company offering a wide range of services, ready to assist you in finding the perfect home tailored to your needs.
                 </p>
                 <Link
                   to="/about"
-                  className="transition-all inline-flex justify-center w-fit border border-gray-300 shadow-sm px-4 py-3 text-md font-medium text-gray-50 hover:bg-cyan-700 hover:text-gray-950  bg-cyan-500 hover:font-bold mb-10 rounded-2xl"
+                  className="transition-all inline-flex justify-center w-fit border border-[#095c41] shadow-sm px-4 py-3 text-md font-medium text-gray-50 hover:bg-white hover:text-gray-950  bg-[#095c41] hover:font-bold mb-10 rounded-2xl"
                   id="options-menu"
                   aria-haspopup="true"
                   aria-expanded="true"
@@ -33,7 +33,8 @@ const Stats = () => {
                   {stats.map((stat) => (
                     <div key={stat.id} className="flex flex-col gap-y-4">
                       <dt className="leading-7 text-gray-400 text-md">{stat.name}</dt>
-                      <dd className="order-first text-6xl font-bold text-cyan-700 sm:text-6xl">{stat.value}</dd>
+                      <dd className="order-first text-6xl font-bold text-[#095c41] first-line:sm:text-6xl">{stat.value}</dd>
+
                     </div>
                   ))}
                 </dl>

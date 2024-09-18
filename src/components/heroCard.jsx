@@ -6,7 +6,6 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase";
 import SearchResultItem from "./SearchResults";
 import AllListings from "../pages/AllListings";
-import Footer from "./Footer";
 
 import { Link } from "react-router-dom";
 import ListingItem from "./ListingItem";
@@ -49,7 +48,8 @@ const HeroCard = ({ listing, updateListings }) => {
     }
 
     // cleaning the user input
-    const capitilizedLocation = address.charAt(0).toUpperCase() + address.slice(1);
+    const capitilizedLocation =
+      address.charAt(0).toUpperCase() + address.slice(1);
     const listingsRef = collection(db, "listings");
     const q = query(
       listingsRef,
@@ -86,14 +86,17 @@ const HeroCard = ({ listing, updateListings }) => {
             <div className="grid content-center md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-5 ">
               <div>
                 <div className="flex gap-3 items-center">
-                  <MdOutlineLocationOn className="text-3xl text-yellow-500" />
-                  <label className="text-black text-xl font-bold"> Location</label>
+                  <MdOutlineLocationOn className="text-3xl text-[#095c41]" />
+                  <label className="text-[#095c41] text-xl font-bold">
+                    {" "}
+                    Location
+                  </label>
                 </div>
                 <div>
                   <input
                     type="text"
                     placeholder="Preferred Location"
-                    className="w-full border-none text-gray-500 bg-white rounded-lg p-2  placeholder:text-gray-400 text-lg font-medium py focus:outline-none border-black"
+                    className="w-full border-none text-gray-500 bg-white rounded-lg p-2  placeholder:text-gray-400 text-lg font-medium py focus:outline-none border-[#095c41]"
                     onChange={handleChange}
                     id="location"
                     name="address"
@@ -105,7 +108,10 @@ const HeroCard = ({ listing, updateListings }) => {
               <div className="flex flex-col">
                 <div className="flex gap-3 items-center">
                   {/* <TbHomeSearch className="text-3xl text-blue-600" /> */}
-                  <label className="text-black text-xl font-bold"> Property Type</label>
+                  <label className="text-[#095c41] text-xl font-bold">
+                    {" "}
+                    Property Type
+                  </label>
                 </div>
                 <select
                   id="hs-select-label"
@@ -122,7 +128,9 @@ const HeroCard = ({ listing, updateListings }) => {
               <div className="flex flex-col">
                 <div className="flex gap-3 items-center">
                   {/* <MdOutlineAttachMoney className="text-3xl text-green-500" /> */}
-                  <label className="text-black text-xl font-bold">Bedrooms</label>
+                  <label className="text-[#095c41] text-xl font-bold">
+                    Bedrooms
+                  </label>
                 </div>
                 <div>
                   <input
@@ -140,7 +148,9 @@ const HeroCard = ({ listing, updateListings }) => {
               <div className="flex flex-col">
                 <div className="flex gap-3 items-center">
                   {/* <MdOutlineAttachMoney className="text-3xl text-green-500" /> */}
-                  <label className="text-black text-xl font-bold">Bathrooms</label>
+                  <label className="text-[#095c41] text-xl font-bold">
+                    Bathrooms
+                  </label>
                 </div>
                 <div>
                   <input
@@ -158,7 +168,10 @@ const HeroCard = ({ listing, updateListings }) => {
           </div>
 
           <div className="md:absolute md:right-[5%] flex items-center justify-center -translate-y-1/2">
-            <button className="bg-cyan-600 px-10 py-4 text-white text-xl font-bold rounded-lg hover:bg-cyan-700" onClick={searchListings}>
+            <button
+              className="bg-[#095c41] px-10 py-4 text-white text-xl border border-[#095c41] font-bold hover:text-gray-900 rounded-lg hover:bg-white duration-300 transition-all"
+              onClick={searchListings}
+            >
               Search
             </button>
 
@@ -168,13 +181,18 @@ const HeroCard = ({ listing, updateListings }) => {
       </div>
       {searchResults.length > 0 ? (
         <div className="px-4 mt-2">
-          <h2 className="text-2xl text-center font-semibold mb-6">Search Results:</h2>
-          <ul className="sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          <h2 className="text-2xl text-center font-semibold mb-6">
+            Search Results:
+          </h2>
+          {/* <ul className="sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
             {searchResults.map((result) => (
-              <SearchResultItem key={result.id} id={result.id} listing={result.data} />
+              <SearchResultItem
+                key={result.id}
+                id={result.id}
+                listing={result.data}
+              />
             ))}
-          </ul>
-          <Footer />
+          </ul> */}
         </div>
       ) : (
         <AllListings />

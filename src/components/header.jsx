@@ -46,7 +46,7 @@ export default function Header() {
   };
 
   return (
-    <div className="bg-cyan-700 border-b shadow-xl sticky top-0 z-40 px-1">
+    <div className="bg-[#095c41] border-b shadow-xl sticky top-0 z-40 px-1">
       <header className="flex justify-between items-center px-2 max-w-7xl mx-auto">
         <div className="flex items-center">
           <img

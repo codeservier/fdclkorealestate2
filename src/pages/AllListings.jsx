@@ -140,7 +140,7 @@ export default function AllListigs() {
           </div>
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

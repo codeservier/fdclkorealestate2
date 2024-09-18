@@ -1,5 +1,5 @@
 import HeroCard from "./heroCard";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 export default function SearchDisplay({ listing, id }) {
   return (
