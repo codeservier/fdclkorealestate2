@@ -13,7 +13,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { PrivateRoute } from "./components/PrivateRoute";
 import Listing from "./pages/Listing";
-import AllListings from "./pages/AllListings";
+import Services from "./pages/Services";
 import { ChakraProvider } from "@chakra-ui/react";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -40,7 +40,7 @@ function App() {
             <Route path="/Terms-of-use" element={<Terms />}></Route>
             <Route path="/privacy-policy" element={<Privacy />}></Route>
             <Route path="/search" element={<Search listing={listings} />}></Route>
-            <Route path="/AllListings" element={<AllListings />}></Route>
+            <Route path="/Services" element={<Services />}></Route>
             <Route path="/About" element={<About />}></Route>
             <Route path="/Contacts" element={<Contact />}></Route>
             <Route path="/profile" element={<PrivateRoute />}>
