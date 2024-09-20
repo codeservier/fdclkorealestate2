@@ -96,17 +96,17 @@ export default function Header() {
                 navigate("/About");
               }}
             >
-              About
-            </li>
+              Search
+            </li> */}
             {/* <li
               className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/AllListings") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
               onClick={() => {
                 closeMenu();
-                navigate("/AllListings");
+                navigate("/Services");
               }}
             >
-              Listings
-            </li> */}
+              Services
+            </li>
             {/* <li
               className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/offers") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
               onClick={() => {
