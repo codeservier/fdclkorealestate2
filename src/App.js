@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/profile";
 import ForgotPassword from "./pages/forgotPassword";
-import Offers from "./pages/offers";
+import Pricing from "./pages/Pricing";
 import Addlisting from "./pages/Addlisting";
 import EditListing from "./pages/EditListing";
 
@@ -49,7 +49,7 @@ function App() {
             <Route path="/Login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
             <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
-            <Route path="/offers" element={<Offers />}></Route>
+            <Route path="/Pricing" element={<Pricing />}></Route>
             <Route path="/category/:categoryName/:listingId" element={<Listing />}></Route>
             <Route path="/Add-Listing" element={<PrivateRoute />}>
               <Route path="/Add-Listing" element={<Addlisting />}></Route>

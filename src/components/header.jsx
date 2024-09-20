@@ -53,7 +53,7 @@ export default function Header() {
           <img
             src={logo}
             alt="logo"
-            className="h-12 cursor-pointer flex-shrink-0"
+            className="h-12 cursor-pointer flex-shrink-0 mt-2 mb-2"
             onClick={() => {
               closeMenu();
               navigate("/");
@@ -98,7 +98,7 @@ export default function Header() {
             >
               Search
             </li> 
-            {/* <li
+             <li
               className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/AllListings") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
               onClick={() => {
                 closeMenu();
@@ -107,15 +107,15 @@ export default function Header() {
             >
               Services
             </li>
-            {/* <li
+            <li
               className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/offers") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
               onClick={() => {
                 closeMenu();
-                navigate("/offers");
+                navigate("/Pricing");
               }}
             >
-              Offers
-            </li> */}
+              Pricing
+            </li>
             {/* <li
               className={`cursor-pointer hover:text-primary/45  py-3 text-sm font-semibold ${
                 (getPath("/Login") || getPath("/profile")) && viewstate !== "Sign in" ? "border-b border-primary text-primary" : "border-b-transparent text-primary"
@@ -141,7 +141,7 @@ export default function Header() {
       </header>
 
       {isMobile && isMenuOpen && (
-        <ul className="bg-cyan-700 border-b border-cyan-200 py-3 px-6 space-y-2">
+        <ul className="bg-white border-b border-white py-3 px-6 space-y-2">
           <li
             className={`cursor-pointer text-sm font-semibold ${getPath("/") ? "text-primary underline font-bold" : "text-primary "}`}
             onClick={() => {
@@ -152,24 +152,33 @@ export default function Header() {
             Home
           </li>
           <li
-            className={`cursor-pointer text-sm font-semibold ${getPath("/AllListings") ? "text-primary underline font-bold" : "text-primary "}`}
-            onClick={() => {
-              closeMenu();
-              navigate("/AllListings");
-            }}
-          >
-            Listings
-          </li>
-          <li
-            className={`cursor-pointer text-sm font-semibold ${getPath("/offers") ? "text-primary underline font-bold" : "text-primary"}`}
-            onClick={() => {
-              closeMenu();
-              navigate("/offers");
-            }}
-          >
-            Offers
-          </li>
-          <li
+              className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/Search") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
+              onClick={() => {
+                closeMenu();
+                navigate("/About");
+              }}
+            >
+              Search
+            </li> 
+            <li
+              className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/AllListings") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
+              onClick={() => {
+                closeMenu();
+                navigate("/Services");
+              }}
+            >
+              Services
+            </li>
+            <li
+              className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/offers") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
+              onClick={() => {
+                closeMenu();
+                navigate("/Pricing");
+              }}
+            >
+              Pricing
+            </li>
+          {/* <li
             className={`cursor-pointer text-sm font-semibold ${
               (getPath("/Login") || getPath("/profile")) && viewstate !== "Sign in" ? "font-bold text-primary underline " : "text-primary"
             }`}
@@ -179,7 +188,7 @@ export default function Header() {
             }}
           >
             {viewstate}
-          </li>
+          </li> */}
           <li
             className={`cursor-pointer text-sm font-semibold ${getPath("/Contacts") ? "text-primary underline font-bold" : "text-primary"}`}
             onClick={() => {
