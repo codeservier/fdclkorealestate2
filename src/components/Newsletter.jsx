@@ -1,24 +1,11 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+
 import React from "react";
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 
 export default function Newsletter() {
   return (
     <div className="max-w-[1440px] mx-auto lg:px-20">
-      <div className="relative isolate overflow-hidden bg-cyan-900 py-16 sm:py-24 lg:py-24 lg:rounded-3xl my-5">
+      <div className="relative isolate overflow-hidden bg-primary py-16 sm:py-24 lg:py-24 lg:rounded-3xl my-5">
         <div className="px-6 lg:px-12">
           <div className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl lg:max-w-lg ">

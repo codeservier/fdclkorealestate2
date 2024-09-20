@@ -5,8 +5,8 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="mt-10 bg-cyan-600 text-black text-lg">
-      <hr className="border-red-500 shadow-lg" />
+    <div className="mt-10 bg-primary/95   text-black ">
+      <hr className="border-primary/10 shadow-lg" />
       <div className="container mx-auto px-6 lg:px-0 xl:px-0">
         <footer className="py-2 text-white mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -41,6 +41,16 @@ const Footer = () => {
                     Buy
                   </a>
                 </li>
+                <li>
+                  <a className="link link-hover hover:text-red-500" href="/AllListings">
+                    Buy
+                  </a>
+                </li>
+                <li>
+                  <a className="link link-hover hover:text-red-500" href="/AllListings">
+                    Buy
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -50,6 +60,21 @@ const Footer = () => {
                 <li>
                   <a className="link link-hover hover:text-red-500" href="/Terms-of-use">
                     Terms of use
+                  </a>
+                </li>
+                <li>
+                  <a className="link link-hover hover:text-red-500" href="/privacy-policy">
+                    Privacy policy
+                  </a>
+                </li>
+                <li>
+                  <a className="link link-hover hover:text-red-500" href="/privacy-policy">
+                    Privacy policy
+                  </a>
+                </li>
+                <li>
+                  <a className="link link-hover hover:text-red-500" href="/privacy-policy">
+                    Privacy policy
                   </a>
                 </li>
                 <li>
@@ -68,12 +93,14 @@ const Footer = () => {
                 <li>JKUAT Towers,</li>
                 <li>Nairobi,</li>
                 <li>Kenya.</li>
+                <li>Kenya.</li>
+                <li>Kenya.</li>
               </ul>
             </div>
           </div>
         </footer>
-        <footer className="bg-cyan-600 text-white text-lg">
-          <hr className="border-red-500" />
+        <footer className="  text-white text-lg mt-10">
+          <hr className="border-gray-700" />
           <div className="flex items-center justify-center py-4">
             <span className="text-lg text-white">
               © {new Date().getFullYear()}{" "}

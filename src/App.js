@@ -35,56 +35,25 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            {/* home path  */}
             <Route path="/" element={<Home listing={listings} setListings={setListings} updateListings={updateListings} />}></Route>
-
-            {/* about path  */}
             <Route path="/search" element={<Search />}></Route>
-
-            {/* terms of use path */}
             <Route path="/Terms-of-use" element={<Terms />}></Route>
-
-            {/* privacy policies path  */}
             <Route path="/privacy-policy" element={<Privacy />}></Route>
-
-            {/* search path  */}
             <Route path="/search" element={<Search listing={listings} />}></Route>
-
-            {/* All listings path  */}
             <Route path="/AllListings" element={<AllListings />}></Route>
-
-            {/* about path  */}
             <Route path="/About" element={<About />}></Route>
-
-            {/* contacts page  */}
             <Route path="/Contacts" element={<Contact />}></Route>
-
-            {/* profile path  */}
             <Route path="/profile" element={<PrivateRoute />}>
               <Route path="/profile" element={<Profile />}></Route>
             </Route>
-
-            {/* login path  */}
             <Route path="/Login" element={<Login />}></Route>
-
-            {/* regiser path  */}
             <Route path="/register" element={<Register />}></Route>
-
-            {/* forgot password path  */}
             <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
-
-            {/* offers path  */}
             <Route path="/offers" element={<Offers />}></Route>
-
-            {/* listings path  */}
             <Route path="/category/:categoryName/:listingId" element={<Listing />}></Route>
-
-            {/* add listing protected path  */}
             <Route path="/Add-Listing" element={<PrivateRoute />}>
               <Route path="/Add-Listing" element={<Addlisting />}></Route>
             </Route>
-
-            {/* add a protected route to edit listing page  */}
             <Route path="/edit-listing" element={<PrivateRoute />}>
               <Route path="/edit-listing/:listingId" element={<EditListing />}></Route>
             </Route>

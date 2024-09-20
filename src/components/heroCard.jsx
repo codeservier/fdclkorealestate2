@@ -10,6 +10,7 @@ import AllListings from "../pages/AllListings";
 import { Link } from "react-router-dom";
 import ListingItem from "./ListingItem";
 import { calcLength } from "framer-motion";
+import CustomButtom from "./button/CustomButtom";
 
 const HeroCard = ({ listing, updateListings }) => {
   const navigate = useNavigate();
@@ -94,7 +95,7 @@ const HeroCard = ({ listing, updateListings }) => {
                 </div>
                 <div>
                   <input
-                    type="text"
+                    type="text" 
                     placeholder="Preferred Location"
                     className="w-full border-none text-gray-500 bg-white rounded-lg p-2  placeholder:text-gray-400 text-lg font-medium py focus:outline-none border-[#095c41]"
                     onChange={handleChange}
@@ -168,12 +169,7 @@ const HeroCard = ({ listing, updateListings }) => {
           </div>
 
           <div className="md:absolute md:right-[5%] flex items-center justify-center -translate-y-1/2">
-            <button
-              className="bg-[#095c41] px-10 py-4 text-white text-xl border border-[#095c41] font-bold hover:text-gray-900 rounded-lg hover:bg-white duration-300 transition-all"
-              onClick={searchListings}
-            >
-              Search
-            </button>
+         <CustomButtom onClick={searchListings}/>
 
             {/* Display results in component  */}
           </div>

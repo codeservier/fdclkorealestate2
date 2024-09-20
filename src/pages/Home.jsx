@@ -18,6 +18,7 @@ import Stats from "../components/Stats";
 import FeaturedProperty from "../components/Featured";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import Contact from "./Contact";
 
 export default function CallToActionWithVideo({
   listing,
@@ -55,14 +56,13 @@ export default function CallToActionWithVideo({
                       position: "absolute",
                       bottom: 1,
                       left: 0,
-                      // bg: "red.400",
                       zIndex: -1,
                     }}
                   >
                     Discover Your,
                   </Text>
                   <br />
-                  <Text as={"span"} color={"#095c41"}>
+                  <Text as={"span"} className="text-primary">
                     Dream Family Home
                   </Text>
                 </Heading>
@@ -72,14 +72,8 @@ export default function CallToActionWithVideo({
                 </Text>
                 <Stack
                   spacing={{ base: 4, sm: 6 }}
-                  direction={{ base: "column", sm: "row" }}
-                >
-                  {/* <Link to="/AllListings" spy={true} smooth={true} offset={-70} duration={500}>
-                  <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6} colorScheme={"red"} bg={"red.400"} _hover={{ bg: "red.500" }}>
-                    Get started &nbsp;
-                    <AiOutlineArrowRight />
-                  </Button>
-                </Link> */}
+                  direction={{ base: "column", sm: "row" }}>
+
                   <Link
                     to="/AllListings"
                     className="transition-all inline-flex justify-center w-fit shadow-sm px-4 py-3 border border-[#095c41] text-md font-medium text-gray-50 hover:text-gray-900 bg-[#095c41]  hover:bg-white hover:font-bold mb-10 rounded-full cursor-pointer pt-2"
@@ -158,7 +152,7 @@ export default function CallToActionWithVideo({
             />
           </Container>
         </div>
-        <div className="px-2 overflow-x-none rounded">
+        {/* <div className="px-2 container overflow-x-none rounded">
           <div className="pb-2 px-2 py-2">
             <Stack flex={1} spacing={{ base: 5, md: 10 }}>
               <Stack
@@ -180,12 +174,13 @@ export default function CallToActionWithVideo({
             </Stack>
           </div>
           <Slider />
-        </div>
+        </div> */}
         <Stats />
         <div className="px-2 rounded-xl">
           <FeaturedProperty />
         </div>{" "}
         <Newsletter />
+        <Contact />
         <Footer />
       </div>
     </>

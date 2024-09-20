@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import MiniNav from "../components/MiniNav";
 // TODO send mail to the mail address
 import Footer from "../components/Footer";
+import CustomButtom from "../components/button/CustomButtom";
 // import background from "../components/background/blurry-gradient-haikei.svg";
 
 export default function Contact() {
@@ -20,10 +21,10 @@ export default function Contact() {
     <>
       {/* ====== Contact Section Start */}
       {/* <div className="bg-cover bg-center" style={{ backgroundImage: `url(${background})` }}> */}
-      <div className="bg-cyan-700 bg-full">
+      <div className=" bg-full">
         <section className="relative z-10 overflow-hidden max-w-[1280px] w-[90%] mx-auto lg:p-6 b">
-          <div className="pt-4">
-            <MiniNav />
+          <div className="pt-10">
+            {/* <MiniNav /> */}
           </div>
           <div className="container mx-auto">
             <div className="-mx-4 flex flex-wrap lg:justify-between">
@@ -71,8 +72,8 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-                <div className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
+              <div className="w-full px-4 lg:w-1/2 xl:w-5/12 ">
+                <div className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12 ">
                   <form>
                     <div className="mb-6">
                       <input
@@ -107,15 +108,13 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <button type="submit" className="bg-blue-500 border-primary w-full rounded border p-3 text-dark transition hover:bg-opacity-90">
-                        Send Message
-                      </button>
+                  <CustomButtom/>
                     </div>
                   </form>
                   <div>
                     <span className="absolute -top-10 -right-9 z-[-1]">
                       <svg width={100} height={100} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z" fill="#3056D3" />
+                        <path fillRule="evenodd" clipRule="evenodd" d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z" fill="#7FD5B9" />
                       </svg>
                     </span>
                     <span className="absolute -right-10 top-[90px] z-[-1]">
@@ -244,7 +243,7 @@ export default function Contact() {
         </section>
       </div>
       {/* ====== Contact Section End */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

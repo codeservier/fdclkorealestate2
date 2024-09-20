@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
+import img1 from '../assets/svg/images/rent.svg'
+import img2 from '../assets/svg/images/buy.svg'
+import img3 from '../assets/svg/images/sell.svg'
 
 export default function FeaturedProperty() {
   return (
@@ -21,9 +24,9 @@ export default function FeaturedProperty() {
           <div className="flex flex-col items-center lg:items-start lg:ml-4">
             <div className="image-container mb-4">
               <img
-                src={require("../components/featured/rent.jpeg")}
+                src={img1}
                 alt="rent"
-                className="image rounded-xl"
+                className="image rounded-xl object-cover w-full h-auto p-4" 
               />
             </div>
             <div className="image-content text-center lg:text-left lg:ml-4">
@@ -45,9 +48,9 @@ export default function FeaturedProperty() {
           <div className="flex flex-col items-center lg:items-start">
             <div className="image-container mb-4">
               <img
-                src={require("../components/featured/buy.jpeg")}
+                src={img2}
                 alt="buy"
-                className="image rounded-xl"
+                className="image rounded-xl object-cover w-full h-auto p-10" 
               />
             </div>
             <div className="image-content text-center lg:text-left lg:mr-4 lg:ml-4">
@@ -58,7 +61,7 @@ export default function FeaturedProperty() {
               </p>
               <Link
                 to="/AllListings"
-                className="btn btn-buy bg-[#095c41] border border-[#095c41] hover:bg-white hover:text-black"
+                className="btn btn-buy bg-[#095c41] border border-primary hover:bg-white hover:text-black"
               >
                 See Options
               </Link>
@@ -69,9 +72,9 @@ export default function FeaturedProperty() {
           <div className="flex flex-col items-center lg:items-start ">
             <div className="image-container mb-4">
               <img
-                src={require("../components/featured/sell.jpeg")}
+                src={img3}
                 alt="sell"
-                className="image rounded-xl object-cover w-full h-auto" // Use w-full to make it full width and h-auto to maintain aspect ratio
+                className="image rounded-xl object-cover w-full h-auto p-4" 
               />
             </div>
 
