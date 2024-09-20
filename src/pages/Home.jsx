@@ -20,6 +20,9 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Contact from "./Contact";
 
+import img from "../assets/svg/images/header.svg";
+import Testimonial from "./Testomonials";
+
 export default function CallToActionWithVideo({
   listing,
   updateListings,
@@ -72,8 +75,8 @@ export default function CallToActionWithVideo({
                 </Text>
                 <Stack
                   spacing={{ base: 4, sm: 6 }}
-                  direction={{ base: "column", sm: "row" }}>
-
+                  direction={{ base: "column", sm: "row" }}
+                >
                   <Link
                     to="/AllListings"
                     className="transition-all inline-flex justify-center w-fit shadow-sm px-4 py-3 border border-[#095c41] text-md font-medium text-gray-50 hover:text-gray-900 bg-[#095c41]  hover:bg-white hover:font-bold mb-10 rounded-full cursor-pointer pt-2"
@@ -103,6 +106,7 @@ export default function CallToActionWithVideo({
                 align={"center"}
                 position={"relative"}
                 w={"full"}
+                h={"full"} // Make sure the Flex has height
               >
                 <Blob
                   w={"150%"}
@@ -111,38 +115,15 @@ export default function CallToActionWithVideo({
                   top={"-20%"}
                   left={0}
                   zIndex={-1}
-                  color={useColorModeValue("red.50", "red.400")}
+                  color={useColorModeValue("green.50", "green.400")}
                 />
-                <Box
-                  position={"relative"}
-                  height={"300px"}
-                  rounded={"2xl"}
-                  boxShadow={"2xl"}
-                  width={"full"}
-                  overflow={"hidden"}
-                >
-                  <IconButton
-                    aria-label={"Play Button"}
-                    variant={"ghost"}
-                    _hover={{ bg: "transparent" }}
-                    size={"lg"}
-                    color={"white"}
-                    position={"absolute"}
-                    left={"50%"}
-                    top={"50%"}
-                    transform={"translateX(-50%) translateY(-50%)"}
-                  />
-                  <Image
-                    alt={"Hero Image"}
-                    fit={"cover"}
-                    align={"center"}
-                    w={"100%"}
-                    h={"100%"}
-                    src={
-                      "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                    }
-                  />
-                </Box>
+
+                <Image
+                  src={img}
+                  maxW="100%" // Ensures it doesn't overflow
+                  maxH="100%" // Ensures it doesn't overflow
+                  objectFit="contain" // Adjust as needed (cover, contain, etc.)
+                />
               </Flex>
             </Stack>
             <HeroCard
@@ -180,6 +161,7 @@ export default function CallToActionWithVideo({
           <FeaturedProperty />
         </div>{" "}
         <Newsletter />
+        <Testimonial/>
         <Contact />
         <Footer />
       </div>
