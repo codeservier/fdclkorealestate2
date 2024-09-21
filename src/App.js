@@ -21,6 +21,8 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Search from "./pages/Search";
 import { useState } from "react";
+import Footer from "./components/Footer";
+import Packages from "./pages/Packages";
 function App() {
   const [listings, setListings] = useState([]);
 
@@ -42,6 +44,7 @@ function App() {
             <Route path="/search" element={<Search listing={listings} />}></Route>
             <Route path="/Services" element={<Services />}></Route>
             <Route path="/About" element={<About />}></Route>
+            <Route path="/Packages" element={<Packages />}></Route>
             <Route path="/Contacts" element={<Contact />}></Route>
             <Route path="/profile" element={<PrivateRoute />}>
               <Route path="/profile" element={<Profile />}></Route>
@@ -58,6 +61,7 @@ function App() {
               <Route path="/edit-listing/:listingId" element={<EditListing />}></Route>
             </Route>
           </Routes>
+          <Footer/>
         </Router>
         <ToastContainer
           position="bottom-center"
