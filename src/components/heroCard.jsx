@@ -169,7 +169,7 @@ const HeroCard = ({ listing, updateListings }) => {
           </div>
 
           <div className="md:absolute md:right-[5%] flex items-center justify-center -translate-y-1/2">
-         <CustomButtom onClick={searchListings}/>
+         <CustomButtom title="Search" onClick={searchListings}/>
 
             {/* Display results in component  */}
           </div>

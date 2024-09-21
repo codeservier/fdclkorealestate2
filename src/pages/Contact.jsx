@@ -1,30 +1,84 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MiniNav from "../components/MiniNav";
-// TODO send mail to the mail address
 import Footer from "../components/Footer";
 import CustomButtom from "../components/button/CustomButtom";
-// import background from "../components/background/blurry-gradient-haikei.svg";
+import { db } from "../firebase";
+import { addDoc, collection } from "firebase/firestore";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState({});
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Contact Us | Property Rent or Buy | GharBikri";
   }, []);
 
+  const handleOnSubmit = async (e) => {
+    e.preventDefault(); 
+
+    const { fullName, email, phoneNumber, message } = formData;
+
+    // Validation checks
+    const newErrors = {};
+    if (!fullName) newErrors.fullName = "Name is required";
+    if (!email) {
+      newErrors.email = "Email is required";
+    } else {
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(email)) {
+        newErrors.email = "Please enter a valid Email";
+      }
+    }
+    if (!phoneNumber) {
+      newErrors.phoneNumber = "Phone number is required";
+    }
+    if (!message) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+
+    // Stop submission if there are errors
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "contactUs"), {
+        name: formData.fullName,
+        email: formData.email,
+        phoneNumber: formData.phoneNumber,
+        message: formData.message,
+      });
+      console.log("Contact submitted successfully");
+      alert("Message sent successfully!");
+
+      // Reset form data
+      setFormData({
+        fullName: "",
+        email: "",
+        phoneNumber: "",
+        message: ""
+      });
+    } catch (error) {
+      console.log("Something went wrong", error);
+    }
+  };
   const contactMethods = {
     contact: "info@househive.com",
-    phone: "+254 (7) 000-000",
-    location: "JKUAT Towers, Nairobi",
+    phone: "+91 000-000-0001",
+    location: "JKUAT Towers, Lucknow",
   };
 
   return (
     <>
-      {/* ====== Contact Section Start */}
-      {/* <div className="bg-cover bg-center" style={{ backgroundImage: `url(${background})` }}> */}
       <div className=" bg-full">
         <section className="relative z-10 overflow-hidden max-w-[1280px] w-[90%] mx-auto lg:p-6 b">
           <div className="pt-10">
-            {/* <MiniNav /> */}
           </div>
           <div className="container mx-auto">
             <div className="-mx-4 flex flex-wrap lg:justify-between">
@@ -81,7 +135,10 @@ export default function Contact() {
                         required
                         placeholder="Your Name"
                         className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                      />
+                        value={formData.fullName}
+                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                        />
+                          {errors.fullName && <span className="text-red-600">{errors.fullName}</span>}
                     </div>
                     <div className="mb-6">
                       <input
@@ -89,14 +146,20 @@ export default function Contact() {
                         required
                         placeholder="Your Email"
                         className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
+                         {errors.email && <span className="text-red-600">{errors.email}</span>}
                     </div>
                     <div className="mb-6">
                       <input
                         type="text"
                         placeholder="Your Phone"
                         className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                        value={formData.phoneNumber}
+                        onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
                       />
+                       {errors.phoneNumber && <span className="text-red-600">{errors.phoneNumber}</span>}
                     </div>
                     <div className="mb-6">
                       <textarea
@@ -104,13 +167,16 @@ export default function Contact() {
                         placeholder="Your Message"
                         required
                         className="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         defaultValue={""}
                       />
+                       {errors.message && <span className="text-red-600">{errors.message}</span>}
                     </div>
                     <div>
-                  <CustomButtom/>
+                      <CustomButtom title="Submit" onClick={handleOnSubmit} />
                     </div>
-                  </form>
+                    </form>
                   <div>
                     <span className="absolute -top-10 -right-9 z-[-1]">
                       <svg width={100} height={100} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -242,8 +308,6 @@ export default function Contact() {
           </div>
         </section>
       </div>
-      {/* ====== Contact Section End */}
-      {/* <Footer /> */}
     </>
   );
 }
