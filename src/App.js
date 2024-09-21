@@ -21,6 +21,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Search from "./pages/Search";
 import { useState } from "react";
+import Footer from "./components/Footer";
 function App() {
   const [listings, setListings] = useState([]);
 
@@ -58,6 +59,7 @@ function App() {
               <Route path="/edit-listing/:listingId" element={<EditListing />}></Route>
             </Route>
           </Routes>
+          <Footer/>
         </Router>
         <ToastContainer
           position="bottom-center"
