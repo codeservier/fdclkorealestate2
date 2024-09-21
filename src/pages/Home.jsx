@@ -163,7 +163,6 @@ export default function CallToActionWithVideo({
         <Newsletter />
         <Testimonial/>
         <Contact />
-        <Footer />
       </div>
     </>
   );

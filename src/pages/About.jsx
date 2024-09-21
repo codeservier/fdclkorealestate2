@@ -1,190 +1,144 @@
-import React, { useEffect } from "react";
-// import Featured from "../Layouts/About/Featured";
-import MiniNav from "../components/MiniNav";
-import { FaUsers, FaHeadset, FaDesktop, FaCertificate, FaShoppingCart, FaHandshake, FaKey } from "react-icons/fa";
-import Footer from "../components/Footer";
-import background from "../components/background/blurry-gradient-haikei.svg";
+import React, { useEffect, useState } from "react";
+import { FaClipboardList, FaSmile, FaUsers, FaTrophy } from "react-icons/fa";
+
+import { FaCheckSquare, FaPaperPlane, FaCogs } from "react-icons/fa"; // Importing the icons
+import OurHistory from "../components/aboutus/OurHistory";
+import OurTeam from "../components/aboutus/OurtTeam";
+import Testimonials from "../components/aboutus/Testomonials";
 
 const About = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Who We Are | House Hive";
-  }, []);
-
+  const [counters, setCounters] = useState([
+    { id: 1, count: 3562, label: "Total Projects", icon: <FaClipboardList className="text-4xl text-orange-500" /> },
+    { id: 2, count: 1054, label: "Happy Clients", icon: <FaSmile className="text-4xl text-orange-500" /> },
+    { id: 3, count: 400, label: "Active Members", icon: <FaUsers className="text-4xl text-orange-500" /> },
+    { id: 4, count: 67, label: "Won Awards", icon: <FaTrophy className="text-4xl text-orange-500" /> },
+  ]);
   return (
-    <div className="bg-cover bg-center" style={{ backgroundImage: `url(${background})` }}>
-      <div className="mx-auto max-w-[1280px] w-[90%] lg:p-6">
-        <div className="pt-4">
-          <MiniNav />
-        </div>
-        <div className="leading-7 text-justify">
-          <div className="grid gap-12">
-            <div>
-              <h2 className="text-4xl text-gray-800 font-semibold lg:text-5xl mb-10 ">About Us</h2>
-              <p className="mt-3 text-gray-800">
-                We extend a warm welcome to <span className="font-bold">House Hive</span> - your ultimate destination for all your real estate requirements! Whether you are seeking
-                to buy, sell, or rent a property, our comprehensive suite of services caters to all your needs with utmost care and attention.
-              </p>
-              <br />
-              <p>
-                At House Hive, we strongly believe that everyone deserves a safe and comfortable abode to call their own. Hence, we strive to offer an exceptional real estate
-                experience, minimizing your hassles and stress. Our extensive network of seasoned agents and brokers, coupled with state-of-the-art technology and exceptional
-                customer support, provides you with the best possible assistance to find your dream home, sell your existing property, or manage your rental investments.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-semibold text-gray-800 mb-3">Our Story</h3>
-              <p className="text-gray-800">
-                Incorporated in 2023 by our visionary founder, House Hive aims to revolutionize the real estate industry through cutting-edge technology, offering an efficient and
-                seamless platform for buyers, sellers, and renters to transact with confidence, convenience, and peace of mind.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-semibold text-gray-800 mb-3">Our Mission</h3>
-              <p className="text-gray-800">
-                At House Hive, we are on a mission to simplify the real estate process and minimize your stress levels. Our unwavering commitment to delivering top-notch customer
-                service ensures that you receive unparalleled support at every stage of your real estate journey. Whether you&apos;re in the market to buy, sell, or rent property,
-                we&apos;re dedicated to assisting you in finding your dream home, selling your current property, or managing your rental investments.
-              </p>
-              <br />
-              <p>
-                Our team of seasoned professionals is well-equipped to handle your real estate needs, regardless of your experience in the market. As your trusted partner, we
-                strive to help you achieve your goals and make your real estate journey a resounding success. Get in touch with us today to learn more about how we can assist you
-                in your real estate endeavors.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-semibold text-gray-800 mb-3">Our Vision</h3>
-              <p className="text-gray-800">
-                Our vision is to be the leading real estate company in the country. We&apos;re committed to providing you with the best possible customer service every step of the
-                way. Whether you&apos;re buying, selling, or renting property, we&apos;re here to help you find your dream home, sell your current property, or manage your rental
-                portfolio.
-              </p>
-            </div>
-
-            <div></div>
-
-            <div>
-              <h3 className="text-3xl font-semibold text-gray-800 mb-5">Our Services</h3>
-              <p className="text-gray-800">We offer a wide range of services to help you buy, sell, or rent property. Here are just a few of the things we can do for you:</p>
-              <br />
-
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-5">
-                  <FaShoppingCart className="inline-block mr-2" />
-                  Buy:
-                </h3>
-
-                <ul className="list-disc list-inside text-gray-800">
-                  <li>Help you find the perfect property that meets your needs and budget</li>
-                  <li>Guide you through the buying process, from making an offer to closing the deal</li>
-                  <li>Assist with financing options and mortgage pre-approvals.</li>
-                </ul>
-
-                <br />
-
-                <h3 className="text-2xl font-semibold text-gray-800 mb-5">
-                  <FaHandshake className="inline-block mr-2" />
-                  Sell:
-                </h3>
-                <ul className="list-disc list-inside text-gray-800">
-                  <li>Help you price your property competitively and market it effectively to potential buyers</li>
-                  <li>Handle all the paperwork and legal aspects of the transaction</li>
-                  <li>Negotiate on your behalf to get you the best possible deal</li>
-                </ul>
-
-                <br />
-
-                <h3 className="text-2xl font-semibold text-gray-800 mb-5">
-                  <FaKey className="inline-block mr-2" />
-                  Rent:
-                </h3>
-                <ul className="list-disc list-inside text-gray-800">
-                  <li>Help you find the perfect rental property that meets your needs and budget</li>
-                  <li>Handle all the paperwork and legal aspects of the rental agreement</li>
-                  <li>Manage your rental property portfolio, including finding tenants, collecting rent, and handling maintenance requests</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* <Featured /> */}
-
-            <div>
-              <h3 className="text-3xl font-semibold text-gray-800 mb-5">Why Choose Us?</h3>
-              <p className="text-gray-800">With so many real estate companies out there, why should you choose House Hive? Here are just a few reasons:</p>
-              <br />
-              <div className="flex flex-col gap-4">
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-                    <FaCertificate className="inline-block mr-2" />
-                    Expertise:
-                  </h3>
-                  <p className="text-gray-800">
-                    Our team of real estate professionals has years of experience and a deep understanding of the local market. We can help you navigate the complex real estate
-                    landscape and make informed decisions that are in your best interests.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-                    <FaDesktop className="inline-block mr-2" />
-                    Technology:
-                  </h3>
-                  <p className="text-gray-800">
-                    At House Hive, we believe that technology should make your life easier. That&apos;s why we&apos;ve invested in cutting-edge tools and software to streamline the
-                    real estate process and provide you with a seamless, hassle-free experience.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-                    <FaHeadset className="inline-block mr-2" />
-                    Customer Service:
-                  </h3>
-                  <p className="text-gray-800">
-                    We understand that buying, selling, or renting property can be stressful. That&apos;s why we&apos;re here to provide you with the best possible customer service
-                    every step of the way. We&apos;re always available to answer your questions, provide guidance, and help you make informed decisions.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-                    <FaUsers className="inline-block mr-2" />
-                    Community:
-                  </h3>
-                  <p className="text-gray-800">
-                    We&apos;re not just a real estate company - we&apos;re part of the community. We&apos;re committed to giving back and making a positive impact in the areas we
-                    serve. When you work with us, you&apos;re not just getting a real estate agent - you&apos;re getting a partner who&apos;s invested in your success.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-semibold text-gray-800 mb-2">Contact Us</h3>
-              <p className="text-gray-800">
-                Ready to get started? Contact us today to learn more about our services and how we can help you achieve your real estate goals. Whether you&apos;re looking to buy,
-                sell, or rent property, we&apos;re here to help you every step of the way. Thank you for choosing House Hive!
-              </p>
-            </div>
-
-            <div>
-              <p className="text-gray-800">
-                At House Hive, we believe in transparency and honesty in all our dealings. We understand the importance of clear communication, and we make sure that our clients
-                are always kept informed throughout the process. Our goal is to establish long-term relationships with our clients by providing them with the best possible service
-                and exceeding their expectations.
-              </p>
-              <br />
-              <p className="text-gray-800">
-                Our website is designed to be user-friendly and easy to navigate. We offer a wide range of properties for sale or rent, including apartments, houses, and commercial
-                properties. Our listings are regularly updated to ensure that you have access to the latest and most accurate information.
-              </p>
+    <>
+      <div className="relative mb-6">
+        <img
+          // src={BackgroundImage} // Uncomment and provide your image source
+          alt="Construction Services"
+          className="w-full h-96 rounded-lg shadow-md"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+          <div className="bg-black bg-opacity-40 w-80 rounded-xl p-6 flex flex-col items-center">
+            <h1 data-title="Services" className="text-4xl font-bold mb-2">
+              <span>Services</span>
+            </h1>
+            <div className="page-breadcrumb">
+              <a href="/" className="hover:underline">
+                Home
+              </a>{" "}
+              / <span className="text-green-700">Services</span>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
+
+      <section className="py-10">
+        <div className="container mx-auto">
+          <div className="pb-16">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold mb-2">A Few Words About Us</h2>
+              <span className="block w-16 h-1 mx-auto bg-orange-500 mb-4"></span>
+              <p className="text-lg">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white shadow-md p-5 rounded-lg text-center">
+              <div className="flex justify-center mb-4">
+                <FaCheckSquare className="text-orange-500 text-4xl" />
+              </div>
+              <h4 className="text-xl font-semibold">Why Choose Us</h4>
+              <p className="mt-2">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+
+            <div className="bg-white shadow-md p-5 rounded-lg text-center">
+              <div className="flex justify-center mb-4">
+                <FaPaperPlane className="text-orange-500 text-4xl" />
+              </div>
+              <h4 className="text-xl font-semibold">Our Mission</h4>
+              <p className="mt-2">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+
+            <div className="bg-white shadow-md p-5 rounded-lg text-center">
+              <div className="flex justify-center mb-4">
+                <FaCogs className="text-orange-500 text-4xl" />
+              </div>
+              <h4 className="text-xl font-semibold">What We Do</h4>
+              <p className="mt-2">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center">
+          <div className="lg:w-1/2 flex items-center">
+            <div>
+              <h3 className="text-3xl font-bold mt-16 mb-4">
+                The Company You Can Trust
+              </h3>
+              <p className="text-gray-700">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages.
+              </p>
+            </div>
+          </div>
+
+          <div className="lg:w-1/2 mt-10 lg:mt-0">
+            <img
+              src="https://via.placeholder.com/500" // Replace with your desired image URL
+              alt="Company Trust"
+              className="w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div className="py-16 bg-gray-100" style={{ backgroundImage: 'url("https://via.placeholder.com/1920x1080")', backgroundSize: "cover", position: "relative" }}>
+      <div className="container mx-auto text-center relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {counters.map((counter) => (
+            <div key={counter.id} className="p-6 bg-white rounded-lg shadow-md">
+              <div className="flex justify-center mb-4">
+                {counter.icon}
+              </div>
+              <span className="block text-3xl font-bold text-gray-800">{counter.count}</span>
+              <p className="text-gray-600">{counter.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
+
+    <OurHistory/>
+    <OurTeam/>
+    <Testimonials/>
+    </>
   );
 };
 
