@@ -116,6 +116,15 @@ export default function Header() {
             >
               Pricing
             </li>
+            <li
+              className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/offers") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
+              onClick={() => {
+                closeMenu();
+                navigate("/Packages");
+              }}
+            >
+              Packages
+            </li>
             {/* <li
               className={`cursor-pointer hover:text-primary/45  py-3 text-sm font-semibold ${
                 (getPath("/Login") || getPath("/profile")) && viewstate !== "Sign in" ? "border-b border-primary text-primary" : "border-b-transparent text-primary"
