@@ -100,31 +100,34 @@ export default function CallToActionWithVideo({
                   </Link>
                 </Stack>
               </Stack>
-              <Flex
-                flex={1}
-                justify={"center"}
-                align={"center"}
-                position={"relative"}
-                w={"full"}
-                h={"full"} // Make sure the Flex has height
-              >
-                <Blob
-                  w={"150%"}
-                  h={"150%"}
-                  position={"absolute"}
-                  top={"-20%"}
-                  left={0}
-                  zIndex={-1}
-                  color={useColorModeValue("green.50", "green.400")}
-                />
+          <Flex
+  flex={1}
+  justify={"center"}
+  align={"center"}
+  position={"relative"}
+  w={"full"}
+  h={"full"}
+>
+  <Blob
+    w={"150%"}
+    h={"150%"}
+    position={"absolute"}
+    top={"-20%"}
+    left={0}
+    zIndex={-1}
+    color={useColorModeValue("green.50", "green.400")}
+  />
 
-                <Image
-                  src={img}
-                  maxW="100%" // Ensures it doesn't overflow
-                  maxH="100%" // Ensures it doesn't overflow
-                  objectFit="contain" // Adjust as needed (cover, contain, etc.)
-                />
-              </Flex>
+  <Image
+    src={img}
+    w="100%" // Increase width to make the image larger
+    h="120%" // Increase height to make the image larger
+    objectFit="contain" // Adjust as needed (cover, contain, etc.)
+    position="relative" // Ensure it's positioned correctly above the Blob
+    zIndex={1} // Bring the image above the Blob
+  />
+</Flex>
+
             </Stack>
             <HeroCard
               listing={listing}
