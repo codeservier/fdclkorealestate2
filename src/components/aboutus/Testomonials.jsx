@@ -24,9 +24,9 @@ const Testimonials = () => {
       <div className="container mx-auto">
         <div className="pb-16 text-center">
           <h2 className="text-3xl font-bold mb-4">Our Testimonials</h2>
-          <span className="block w-16 h-1 mx-auto bg-orange-500 mb-4"></span>
+          <span className="block w-16 h-1 mx-auto bg-green-600 mb-4"></span>
           <p className="text-lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          Our clients rave about FDCLKO Construction's exceptional quality, professionalism, and ability to turn their visions into reality.
           </p>
         </div>
 

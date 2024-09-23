@@ -40,11 +40,11 @@ export default function CallToActionWithVideo({
                 align={"center"}
                 position={"relative"}
                 w={"full"}
-                h={"90vh"} // Set Flex height to match the image height
+                h={{ base: "90vh", md: "90vh" }}// Set Flex height to match the image height
               >
                 <Image
                   src={img}
-                  height="91vh" 
+                  height={{ base: "88vh", md: "91vh" }}
                   objectFit="cover"
                   position="absolute"
                   zIndex={0}
@@ -90,9 +90,10 @@ export default function CallToActionWithVideo({
                       including apartments, houses, and townhomes!
                     </Text>
                     <Stack
-                      spacing={{ base: 4, sm: 6 }}
-                      direction={{ base: "column", sm: "row" }}
-                      mt={8}
+                       spacing={{ base: 4, sm: 6 }} // Adjust spacing for small screens
+                       direction={{ base: "column", sm: "row" }} // Stack vertically on small screens
+                       mt={8}
+                       align={{ base: "center", sm: "flex-start" }}
                     >
                       <Link
                         to="/AllListings"
