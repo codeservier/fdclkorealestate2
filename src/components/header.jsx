@@ -107,7 +107,7 @@ export default function Header() {
             >
               Services
             </li>
-            <li
+            {/* <li
               className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/offers") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
               onClick={() => {
                 closeMenu();
@@ -115,7 +115,7 @@ export default function Header() {
               }}
             >
               Pricing
-            </li>
+            </li> */}
             <li
               className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/offers") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
               onClick={() => {
@@ -167,7 +167,7 @@ export default function Header() {
             >
               Services
             </li>
-            <li
+            {/* <li
               className={`cursor-pointer py-3 hover:text-primary/45  text-sm font-semibold ${getPath("/offers") ? "border-b border-primary text-primary" : "border-b-transparent text-primary"}`}
               onClick={() => {
                 closeMenu();
@@ -175,7 +175,7 @@ export default function Header() {
               }}
             >
               Pricing
-            </li>
+            </li> */}
           <li
             className={`cursor-pointer text-sm font-semibold ${getPath("/Contacts") ? "text-primary underline font-bold" : "text-primary"}`}
             onClick={() => {
