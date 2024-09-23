@@ -125,7 +125,7 @@ export default function Header() {
             >
               Packages
             </li>
-            {/* <li
+            {/* <li''''''''''
               className={`cursor-pointer hover:text-primary/45  py-3 text-sm font-semibold ${
                 (getPath("/Login") || getPath("/profile")) && viewstate !== "Sign in" ? "border-b border-primary text-primary" : "border-b-transparent text-primary"
               }`}
