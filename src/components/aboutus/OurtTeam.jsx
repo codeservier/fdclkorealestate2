@@ -2,10 +2,10 @@ import React from "react";
 
 const OurTeam = () => {
   const teamMembers = [
-    { name: "Danny Burton", role: "Engineer", imgSrc: "https://via.placeholder.com/150" },
-    { name: "Jane Doe", role: "Designer", imgSrc: "https://via.placeholder.com/150" },
-    { name: "John Smith", role: "Developer", imgSrc: "https://via.placeholder.com/150" },
-    { name: "Emily Johnson", role: "Manager", imgSrc: "https://via.placeholder.com/150" },
+    { name: "AK Chaurasiya", role: "Engineer", imgSrc: "https://via.placeholder.com/150" },
+    { name: "Sankalp Bharti", role: "Designer", imgSrc: "https://via.placeholder.com/150" },
+    { name: "Dinesh Kumar", role: "Developer", imgSrc: "https://via.placeholder.com/150" },
+    { name: "Pritam Sharma", role: "Manager", imgSrc: "https://via.placeholder.com/150" },
   ];
 
   return (
