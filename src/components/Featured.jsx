@@ -31,7 +31,7 @@ export default function FeaturedProperty() {
             </div>
             <div className="image-content text-center lg:text-left lg:ml-4">
               <h3 className="text-3xl font-semibold mb-2">Rent</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-400 ml-4 mr-4">
                 We are creating a seamless online experience from shopping on
                 the largest rental network, to applying, to paying rent.
               </p>
@@ -55,13 +55,13 @@ export default function FeaturedProperty() {
             </div>
             <div className="image-content text-center lg:text-left lg:mr-4 lg:ml-4">
               <h3 className="text-3xl font-semibold mb-2">Buy</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-400 ml-4 mr-4">
                 Find your place with an immersive photo experience and the most
                 listings, including things you won't find elsewhere.
               </p>
               <Link
                 to="/AllListings"
-                className="btn btn-buy bg-[#095c41] border border-primary hover:bg-white hover:text-black"
+                className="btn btn-buy bg-[#095c41] border border-primary hover:bg-white hover:text-black "
               >
                 See Options
               </Link>
@@ -80,7 +80,7 @@ export default function FeaturedProperty() {
 
             <div className="image-content text-center lg:text-left lg:mr-4">
               <h3 className="text-3xl font-semibold mb-2">Sell</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-400 ml-4 mr-4">
                 No matter what path you take to sell your home, we can help you
                 navigate a successful sale and with the best practice and safety
                 in mind.
