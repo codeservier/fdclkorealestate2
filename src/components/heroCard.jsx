@@ -80,7 +80,7 @@ const HeroCard = ({ listing, updateListings }) => {
   }
 
   return (
-    <div className="">
+    <div className="mt-10">
       <div className="w-full flex h-auto flex-col justify-center items-center">
         <div className="w-[90%] xl:max-w-[1000px] xl:w-[90%] relative md:max-w-[900px]">
           <div className="bg-white p-10 md:p-10 lg:p-10 shadow-lg rounded-3xl">
@@ -169,7 +169,7 @@ const HeroCard = ({ listing, updateListings }) => {
           </div>
 
           <div className="md:absolute md:right-[5%] flex items-center justify-center -translate-y-1/2">
-         <CustomButtom onClick={searchListings}/>
+         <CustomButtom title="Search" onClick={searchListings}/>
 
             {/* Display results in component  */}
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import BackgroundImage from '../assets/services/bg_71.jpg';
+import BackgroundImage from '../assets/services/bg_75.jpeg';
 import Img1 from '../assets/services/img_1.jpg';
 import Img2 from '../assets/services/img_2.jpg';
 import Img3 from '../assets/services/img_3.jpg';
@@ -48,7 +48,7 @@ function Services() {
         <img 
           src={BackgroundImage}
           alt="Construction Services"
-          className="w-full h-96 rounded-lg shadow-md"
+          className="w-full h-96 shadow-md object-cover opacity-75         "
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <div className="bg-black bg-opacity-40 w-80 rounded-xl p-6 flex flex-col items-center">

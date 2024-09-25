@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8  ml-8">
           {footerLinks.map((column, index) => (
             <div key={index} className="footer-links-column">
               <div className="heading-81 font-bold mb-2">{column.title}</div>
