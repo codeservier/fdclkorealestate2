@@ -1,39 +1,35 @@
 import React from 'react';
+import logo from '../assets/svg/logo.svg'
 
 const Footer = () => {
   return (
     <div className="footer-2">
-    <div className="section-56 bg-gray-100 py-8">
+    <div className="section-56 bg-primary  py-8">
       <div className="container mx-auto">
-        <div className="flex flex-col sm:flex-row items-center text-center sm:text-left">
-          <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-4">
-            {/* <img
-              src="https://cdn.prod.website-files.com/63a5ab1451ece76d773e6c46/65cdae4d10da104c9392bbb3_Attentive_green-04.svg"
+        <div className="flex flex-col  items-center justify-center p-4 text-center sm:text-left">
+          <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-4 bg-white rounded-full p-4 ">
+            <img
+              src={logo}
               loading="lazy"
-              width="140"
-              height="40"
+              width="50"
+              height="50"
               alt="Attentive logo"
-            /> */}
+            />
           </div>
-          <div className="flex-grow">
-            <div className="supporting-text mb-2">
+         
+            <div className="supporting-text mb-2 text-white">
               Built with love for outdoor field service professionals.
             </div>
-            {/* <img
-              src="https://cdn.prod.website-files.com/63a5ab1451ece76d773e6c46/66852af05700b2b720712450_soc-2type2.webp"
-              loading="lazy"
-              alt="SOC 2"
-            /> */}
-          </div>
+         
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8  ml-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 bg-green-600/20 p-4 rounded-2xl  lg:grid-cols-5 gap-8   text-center">
           {footerLinks.map((column, index) => (
-            <div key={index} className="footer-links-column">
-              <div className="heading-81 font-bold mb-2">{column.title}</div>
+            <div key={index} className="footer-links-column ">
+              <div className="heading-81 text-xl text-white underline font-bold mb-2">{column.title}</div>
               {column.links.map((link, idx) => (
                 <div key={idx} className="button-base-12 mb-1">
-                  <a href={link.href} target={link.target} className="link-14 text-blue-600 hover:underline">
+                  <a href={link.href} target={link.target} className="link-14 text-white hover:underline">
                     {link.label}
                   </a>
                   {link.badge && (
@@ -47,18 +43,18 @@ const Footer = () => {
       </div>
     </div>
 
-    <div className="section-57 bg-gray-200 py-4">
+    <div className="section-57 bg-primary border-t border-gray-500 py-4">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
-          <div className="footer-text text-gray-700 mb-2">
-            Copyright © 2024, <a href="/" className="text-blue-600 hover:underline">Attentive</a> Inc. All Rights Reserved
+          <div className="footer-text text-mywhite mb-2">
+            Copyright © 2024, <a href="/" className="text-mywhite hover:underline">Attentive</a> Inc. All Rights Reserved
           </div>
           <div className="flex space-x-4">
-            <a href="/privacy-policy" className="text-gray-600 hover:underline">Privacy Policy</a>
-            <a href="/security" className="text-gray-600 hover:underline">Security</a>
+            <a href="/privacy-policy" className="text-mywhite hover:underline">Privacy Policy</a>
+            <a href="/security" className="text-mywhite hover:underline">Security</a>
             {socialLinks.map((social, index) => (
               <a key={index} href={social.href} target="_blank" className="w-inline-block">
-                <social.icon className="w-6 h-6 fill-current text-gray-600 hover:text-blue-600" />
+                <social.icon className="w-6 h-6 fill-current text-mywhite hover:text-mywhite" />
               </a>
             ))}
           </div>
@@ -76,6 +72,12 @@ const footerLinks = [
       { label: 'Accelerate', href: '/accelerate' },
       { label: 'Automeasure', href: '/automeasure' },
       { label: 'Beam AI', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'Beam AI', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'Beam AI', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'Beam AI', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'Beam AI', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'Beam AI', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'Beam AI', href: 'https://www.ibeam.ai', target: '_blank' },
     ],
   },
   {
@@ -85,6 +87,10 @@ const footerLinks = [
       { label: 'Paving', href: '/industries/paving-maintenance-and-construction' },
       { label: 'Snow Management', href: '/industries/snow-management' },
       { label: 'Facilities Maintenance', href: '/industries/facilities-maintenance' },
+      { label: 'General Construction', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'General Construction', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'General Construction', href: 'https://www.ibeam.ai', target: '_blank' },
+      { label: 'General Construction', href: 'https://www.ibeam.ai', target: '_blank' },
       { label: 'General Construction', href: 'https://www.ibeam.ai', target: '_blank' },
     ],
   },
@@ -96,6 +102,11 @@ const footerLinks = [
       { label: 'Webinars', href: '/resources/webinars', target: '_blank' },
       { label: 'Templates', href: '/resources/templates', target: '_blank' },
       { label: 'Help Center', href: '/resources/help-center', target: '_blank' },
+      { label: 'Help Center', href: '/resources/help-center', target: '_blank' },
+      { label: 'Help Center', href: '/resources/help-center', target: '_blank' },
+      { label: 'Help Center', href: '/resources/help-center', target: '_blank' },
+      { label: 'Help Center', href: '/resources/help-center', target: '_blank' },
+  
     ],
   },
   {
@@ -103,6 +114,12 @@ const footerLinks = [
     links: [
       { label: 'About us', href: '/about-us' },
       { label: 'Careers', href: '/careers', badge: 'Hiring' },
+      { label: 'Contact us', href: '/contact' },
+      { label: 'Contact us', href: '/contact' },
+      { label: 'Contact us', href: '/contact' },
+      { label: 'Contact us', href: '/contact' },
+      { label: 'Contact us', href: '/contact' },
+      { label: 'Contact us', href: '/contact' },
       { label: 'Contact us', href: '/contact' },
     ],
   },
