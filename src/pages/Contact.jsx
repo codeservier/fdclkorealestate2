@@ -69,8 +69,8 @@ export default function Contact() {
     }
   };
   const contactMethods = {
-    contact: "info@househive.com",
-    phone: "+91 000-000-0001",
+    contact: "info@fdclko.com",
+    phone: "+91 1234567890",
     location: "JKUAT Towers, Lucknow",
   };
 

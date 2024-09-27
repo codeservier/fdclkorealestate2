@@ -113,7 +113,7 @@ const footerLinks = [
     title: 'Company',
     links: [
       { label: 'About us', href: '/about-us' },
-      { label: 'Careers', href: '/careers', badge: 'Hiring' },
+      // { label: 'Careers', href: '/careers', badge: 'Hiring' },
       { label: 'Contact us', href: '/contact' },
       { label: 'Contact us', href: '/contact' },
       { label: 'Contact us', href: '/contact' },
