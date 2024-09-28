@@ -27,6 +27,8 @@ import Packages from "./pages/Packages";
 import AdminDashboard from "./Admin/dashboard/AdminDashboard";
 import { Browser } from "leaflet";
 import Layout from "./components/Layout";
+import AccordionItem from "./pages/Packages";
+import PackagesComponent from "./components/PackagesComponent";
 
 function App() {
   const [listings, setListings] = useState([]);
@@ -58,6 +60,8 @@ function App() {
               element={<Search listing={listings} />}
             ></Route>
             <Route path="/Services" element={<Services />}></Route>
+            <Route path="/PackagesComponent" element={<PackagesComponent />}></Route>
+            
 
             <Route path="/About" element={<About />}></Route>
             <Route path="/Packages" element={<Packages />}></Route>
